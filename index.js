@@ -1,11 +1,8 @@
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000 
+const usuarioRoute = require('./routes/usuarioRoute')
 
-app.get('/', (req, res) => {
-    res.status(200).send({
-        'mensagem': 'Primeira rota com GET'
-    })
-})
+app.use(usuarioRoute)
 
 app.listen(port, () => {console.log(`App rodando em http://localhost:${port}`)})

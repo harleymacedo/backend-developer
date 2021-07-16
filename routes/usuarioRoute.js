@@ -13,3 +13,20 @@ usuarioRouter.get('/usuarios', (req, res) => {
 usuarioRouter.get('/usuario/:id', (req, res) => {
     res.status(200).send({"id": 1, "nome": "Marcos", "idade": 29})
 })
+
+//Inserir usuário
+usuarioRouter.post('/usuario', (req, res) => {
+    res.status(201).send({"mensagem": "Usuário inserido com sucesso!"})
+})
+
+//Alterar usuário
+usuarioRouter.put('/usuario/:id', (req, res) => {
+    res.status(201).send({"mensagem": "Usuário alterado com sucesso!"})
+})
+
+//Excluir usuário
+usuarioRouter.delete('/usuario/:id', (req, res) => {
+    res.status(201).send({"mensagem": "Usuário excluído com sucesso!"})
+})
+
+module.exports = usuarioRouter
