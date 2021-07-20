@@ -1,8 +1,13 @@
+//Importações
 const express = require('express')
 const app = express()
 const port = process.env.PORT || 3000 
 const usuarioRoute = require('./routes/usuarioRoute')
+const postRoute = require('./routes/postRoute')
 
+//Middlewares
 app.use(usuarioRoute)
+app.use(postRoute)
 
-app.listen(port, () => {console.log(`App rodando em http://localhost:${port}`)})
+//Worker
+app.listen(port) 
