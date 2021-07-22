@@ -14,11 +14,11 @@ postRoute.post('/posts', (req, res) => {
     res.status(201).send({'mensagem': 'Rota do Post post'})
 })
 
-postRoute.put('/posts', (req, res) => {
+postRoute.put('/posts/:id', (req, res) => {
     res.status(201).send({'mensagem': 'Rota do put post'})
 })
 
-postRoute.delete('/posts', (req, res) => {
+postRoute.delete('/posts/:id', (req, res) => {
     res.status(201).send({'mensagem': 'Rota do delete post'})
 })
 
