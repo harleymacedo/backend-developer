@@ -6,4 +6,9 @@ create table usuario(
     idade int not null
 )
 
-create table post;
+create table post(
+    id serial primary key,
+    titulo varchar(200) not null,
+    texto varchar(500) not null,
+    likes int not null default 0
+)
